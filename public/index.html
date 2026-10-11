@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>AI Notes Summarizer</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="container">
+      <header class="topbar">
+        <h1>AI Notes Summarizer</h1>
+        <div class="user-panel">
+          <span id="welcomeText">Not logged in</span>
+          <button id="logoutBtn" class="secondary hidden">Logout</button>
+        </div>
+      </header>
+
+      <main class="layout">
+        <section class="card auth-section">
+          <h2>Authentication</h2>
+
+          <div class="tab-row">
+            <button class="tab-btn active" data-tab="login-tab">Login</button>
+            <button class="tab-btn" data-tab="register-tab">Register</button>
+          </div>
+
+          <div id="login-tab" class="tab-panel active">
+            <form id="loginForm">
+              <input type="email" id="loginEmail" placeholder="Email" required />
+              <input type="password" id="loginPassword" placeholder="Password" required />
+              <button type="submit">Login</button>
+            </form>
+          </div>
+
+          <div id="register-tab" class="tab-panel">
+            <form id="registerForm">
+              <input type="text" id="registerName" placeholder="Full Name" required />
+              <input type="email" id="registerEmail" placeholder="Email" required />
+              <input type="password" id="registerPassword" placeholder="Password" required />
+              <button type="submit">Create Account</button>
+            </form>
+          </div>
+
+          <div class="admin-note">
+            <strong>Admin Login:</strong> admin@notes.com / admin123
+          </div>
+        </section>
+
+        <section class="card upload-section">
+          <h2>Upload Document</h2>
+          <form id="uploadForm">
+            <input type="file" id="documentInput" accept=".txt,.pdf,.doc,.docx" required />
+            <button type="submit">Upload & Extract Text</button>
+          </form>
+          <div id="uploadMessage" class="message"></div>
+        </section>
+
+        <section class="card actions-section">
+          <h2>Summarize Notes</h2>
+          <label for="documentSelect">Choose Uploaded Document</label>
+          <select id="documentSelect"></select>
+          <button id="generateSummaryBtn">Generate Summary</button>
+          <div id="summaryOutput" class="output-box"></div>
+
+          <div class="keyword-box">
+            <h3>Keywords</h3>
+            <div id="keywordOutput" class="tag-list"></div>
+          </div>
+
+          <div class="button-row">
+            <button id="saveSummaryBtn" class="success">Save Summary</button>
+            <button id="downloadSummaryBtn" class="secondary">Download Notes</button>
+          </div>
+        </section>
+
+        <section class="card history-section">
+          <h2>Saved Notes</h2>
+          <div id="savedSummaryList" class="saved-list"></div>
+        </section>
+
+        <section class="card admin-section">
+          <h2>Admin Dashboard</h2>
+          <div id="adminDashboard" class="admin-dashboard"></div>
+        </section>
+      </main>
+    </div>
+
+    <script src="app.js"></script>
+  </body>
+</html>

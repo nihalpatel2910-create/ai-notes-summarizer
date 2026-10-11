@@ -1,0 +1,42 @@
+# AI Notes Summarizer
+
+A simple full-stack app for summarizing uploaded notes using basic JavaScript on the front end and SQL database on the back end.
+
+## Features
+- User registration and login
+- Document upload
+- Text extraction from .txt, .pdf, and .docx files
+- AI-style summarization using keyword scoring
+- Keyword extraction
+- Save summary to database
+- Download notes as text file
+- Admin dashboard with counts and recent data
+
+## Tech Stack
+- Front end: HTML, CSS, JavaScript
+- Back end: Node.js + Express
+- Database: SQLite (SQL)
+
+## Setup
+
+1. Install dependencies:
+   ```bash
+   npm install
+   ```
+
+2. Start the app:
+   ```bash
+   npm start
+   ```
+
+3. Open in browser:
+   ```bash
+   http://localhost:3000
+   ```
+
+## Default Admin
+- Email: admin@notes.com
+- Password: admin123
+
+## Notes
+This project is intentionally simple and beginner-friendly. The summarizer uses a keyword-based scoring method instead of a heavy AI model, making it easy to understand and customize.
